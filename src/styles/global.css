@@ -1,0 +1,139 @@
+:root {
+  --font-color: #f2f2f2;
+  --background-color: #161616;
+  --background-color-2: #222222;
+  --button-color: #81d929;
+
+  --details-color: #f2e96d;
+  --secondary-color: #a8d7e8;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "inter", sans-serif;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  background: var(--background-color-2);
+
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+/*font famili para los titulos y las cards*/
+@font-face {
+  font-family: "Get Schwifty";
+  src: url("/public/fonts/Rick-and-Morty.ttf") format("truetype");
+}
+
+/*HEADER*/
+nav {
+  height: 100px;
+  border-radius: 0px 10px;
+  padding: 5px 80px;
+
+  display: flex;
+  background: var(--background-color);
+
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+/*Animacion del subrayado con el hover*/
+nav h3 a {
+  all: unset;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: var(--font-color);
+  cursor: pointer;
+}
+nav h3 a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--button-color);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-out;
+}
+a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/*CARDS DE EPISODIOS: van aca pq las uso en las dos páginas*/
+.episode-card {
+  width: 300px;
+  max-width: 300px;
+  height: 220px;
+  max-height: 220px;
+  background: var(--background-color);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*FOOTER*/
+footer {
+  border-radius: 10px 0 0 0;
+  margin-bottom: 0;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background: var(--background-color);
+
+  justify-content: space-between;
+
+  .logos-footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+  }
+
+  img {
+    padding: 5px;
+    height: 40px;
+    width: 40px;
+  }
+
+  p {
+    padding: 5px 80px;
+    font-size: 12px;
+  }
+}
+
+/*general para los buttons*/
+button,
+a {
+  cursor: pointer;
+}
+/*MEDIA QUERY PARA EL HEADER Y FOOTER*/
+
+@media (max-width: 450px) and (min-width: 320px) {
+  nav {
+    padding: 5px 10px;
+  }
+  footer {
+    p {
+      padding: 5px 10px;
+    }
+  }
+}
