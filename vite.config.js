@@ -5,7 +5,6 @@ import { defineConfig } from "vite";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-  base: "/Parcial-2---Fiorito-Greta/",
   build: {
     rollupOptions: {
       input: {
