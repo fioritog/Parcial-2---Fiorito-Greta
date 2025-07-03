@@ -25,7 +25,7 @@ elDivIntro.className = "intro";
 elMain.appendChild(elDivIntro);
 //imágen del título, en un div con el resto de la intro
 const titleImage = document.createElement("img");
-titleImage.src = "/MainLogo.png";
+titleImage.src = "/public/images/MainLogo.png";
 titleImage.alt = "Main page title: 'Rick & Morty'";
 titleImage.className = "main-logo";
 elDivIntro.appendChild(titleImage);
@@ -51,7 +51,7 @@ elMain.appendChild(elDivRandomizer);
 elDivRandomizer.innerHTML = `
 <div class="container">
   <div class="content-img" id="img-1">
-    <img src="./public/FotoLeftSide.png" alt="decoracion del randomizador">
+    <img src="/public/images/FotoLeftSide.png" alt="decoracion del randomizador">
   </div>
   <div class="content">
     <h1>The Episode Randomizer</h1>
@@ -61,7 +61,7 @@ elDivRandomizer.innerHTML = `
     </div>
     </div>
     <div class="content-img" id="img-2">
-       <img src="./public/FotoRightSide.png" alt="decoracion del randomizador">
+       <img src="/public/images/FotoRightSide.png" alt="decoracion del randomizador">
     </div>
 </div>`;
 

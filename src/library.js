@@ -279,7 +279,7 @@ elFilterBtn.addEventListener("click", () => {
   if (favorites.length === 0) {
     divCardsEl.innerHTML = `
     <div class=no-favorites>
-    <img src="./public/NoFavorites.png" alt="non favorite episodes found"/>
+    <img src="/public/NoFavorites.png" alt="non favorite episodes found"/>
     <p>No episodes marked as favorites as of yet</p>
     <a href="./library.html">Go back to library</a>
     </div>

@@ -4,7 +4,7 @@ export function showHeader() {
   return `
       <nav>
         <a href="/index.html"
-          ><img src="/public/LogoPortal.png" alt="Logo de la página"
+          ><img src="/public/images/LogoPortal.png" alt="Logo de la página"
         /></a>
         <h3><a href="/library.html">Episodes Library</a></h3>
       </nav>
